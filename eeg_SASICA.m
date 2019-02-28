@@ -435,6 +435,7 @@ if cfg.EOGcorr.enable
     disp('Correlation with EOGs.');
     %% Correlation with EOG
     struct2ws(cfg.EOGcorr);
+    chnb('labels',[]);
     if ~nocompute
         noV = 0;noH = 0;
         try
@@ -548,6 +549,7 @@ if cfg.chancorr.enable
     disp('Correlation with other channels.')
     %% Correlation with other channels
     struct2ws(cfg.chancorr);
+    chnb('labels',[]);
     try
         [chan cellchannames channames] = chnb(channames);
     end
